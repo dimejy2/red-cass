@@ -11,11 +11,11 @@ object myObj extends Application{
   val myJTree = pfac.getNJson(1000).parseJson
 
 
-  /*for(_ <- 1 to 1000) {
+  for(_ <- 1 to 1000) {
     var personHold = pfac.getAPerson(1)
     println (personHold)
     redDb.writeToRedisWithExpire(personHold.name, personHold.age, 3000)
-  }*/
+  }
 
 
   redDb.printPattern("*a*")
