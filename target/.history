@@ -1,0 +1,33 @@
+run main 
+clear 
+run main 
+clear 
+run main 
+run 
+sbt clean 
+clean 
+run 
+clean 
+run 
+last compile:run 
+run 
+clean 
+run 
+last compile:run 
+run 
+version 
+run 
+clean 
+run 
+reload 
+run 
+clean 
+run 
+clean 
+run 
+clean 
+run 
+clean 
+run 
+clean 
+run 
