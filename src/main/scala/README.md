@@ -1,2 +1,2 @@
 # red-cass
-a test for writing to Redis, cassandra for persistence and data processing with spark
+a test for writing to cassandra for persistence and data processing with spark
