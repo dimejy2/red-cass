@@ -1,5 +1,5 @@
 package people
- class Person(val name: String, val age: Int ){
+ class Person(val name: String, val age : Int, var myIdioSync: Array[String] = new Array()){
 
    val MyName = "MyName"
    val MyAge = "MyAge"

@@ -22,7 +22,7 @@ def generateMaxLength( length : Int) : Int = math.abs(myGenerator.nextInt) % len
 
   def getChar(n: Int) : Char = (generateMaxLength(ALPHABET) + 97) toChar
 
-  def getAPerson(n: Int) : Person = new Person(getName, getAge)
+  def getAPerson(n: Int) : Person = new Person(getName, getAge)8
 
   def getNPeople(n: Int) : List[_] =  mapRangeToFunction(n, getAPerson _)
                                                   //> getNPeople: (n: Int)List[_]
