@@ -2,28 +2,26 @@ package people
 import people._
 import spray.json._
 
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkContext._
+import org.apache.spark.SparkConf
+import com.datastax.spark.connector._
+
 object myObj extends Application{
 
+  val sparkMaster =  "spark://Oladimejis-MacBook-Air.local:7077"
+
   val pfac = PersonFactory
-  val writeFile = new StringToFile
-  // val redDb = RedisInterface
 
-  // val myJTree = pfac.getNJson(1000).parseJson
-
-
-  // for(_ <- 1 to 1000) {
-  //   var personHold = pfac.getAPerson(1)
-  //   println (personHold)
-  //   redDb.writeToRedisWithExpire(personHold.name, personHold.age, 3000)
-  // }
+  val conf = new SparkConf(true)
+  .set("spark.cassandra.connection.host", "127.0.0.1")
+  val sc = new SparkContext("http://localhost:8080", "test", conf)
 
 
+  val rdd = sc.cassandraTable("test", "kv")
+  println(rdd.count)
+  println(rdd.first)
+  println(rdd.map(_.getInt("value")).sum)
 
-  // redDb.printPattern("*a*")
-
-
-  /*val written = writeFile.writeToFile(f"${pfac.getName}.json", f"[ ${pfac.getNJson(10)} ]")*/
-
-  for( _ <- 1 to 10 ) println( pfac.getAPerson(1))
 
 }

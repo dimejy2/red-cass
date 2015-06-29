@@ -31,3 +31,7 @@ clean
 run 
 clean 
 run 
+val conf = new SparkConf(true)
+run 
+last compile:run 
+run 
