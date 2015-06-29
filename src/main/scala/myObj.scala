@@ -1,5 +1,4 @@
 package people
-import people._
 import spray.json._
 
 import org.apache.spark.SparkContext
@@ -17,11 +16,9 @@ object myObj extends Application{
   .set("spark.cassandra.connection.host", "127.0.0.1")
   val sc = new SparkContext("http://localhost:8080", "test", conf)
 
-
   val rdd = sc.cassandraTable("test", "kv")
   println(rdd.count)
   println(rdd.first)
   println(rdd.map(_.getInt("value")).sum)
-
 
 }
