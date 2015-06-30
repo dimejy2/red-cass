@@ -1,4 +1,5 @@
 package people
+
 import java.io._
 
 class StringToFile{
@@ -8,7 +9,6 @@ class StringToFile{
   def writeToFile(fileName:String, data:String) =
     using (new FileWriter(fileName)) {
       fileWriter => fileWriter.write(data)
-
     }
 
 }

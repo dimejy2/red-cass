@@ -1,11 +1,10 @@
 package people
+
 import com.redis._
 
 object RedisInterface {
 
   val r = new RedisClient("localhost", 6379)
-
-
   def writeToRedis(key : String, value : Any) = r.set(key, value)
 
   def setExpire( key: String, expire : Int) = r.expire(key, expire)
@@ -22,8 +21,7 @@ object RedisInterface {
     r.del(key)
   }
 
-  def printLastSave: Unit = r.lastsave
-
+  def printLastSave(): Unit = r.lastsave
 
   def getPattern(pattern : String)  = r.keys(pattern)
 

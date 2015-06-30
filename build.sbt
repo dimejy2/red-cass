@@ -1,4 +1,5 @@
 name := "SparkDataAnalysis"
+
 version := "1.0"
 
 resolvers += "spray repo" at "http://repo.spray.io"
