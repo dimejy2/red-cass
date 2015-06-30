@@ -13,6 +13,7 @@ src_managed/
 project/
 project/boot/
 project/plugins/project/
+src/main/scala/config/
 
 *.iml
 .idea
