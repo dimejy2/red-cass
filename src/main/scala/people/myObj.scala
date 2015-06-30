@@ -12,6 +12,6 @@ object myObj extends App {
     .set("spark.cores.max", "10")
     .setAppName("Executor")
   val sc = new SparkContext(Config.sparkContext, "test", conf)
-  val file = sc.textFile("RedisInterface.scala")
+  val file = sc.textFile("myObj.scala")
   file.count()
 }
