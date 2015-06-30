@@ -6,9 +6,7 @@ import org.apache.spark.SparkContext._
 import org.apache.spark.SparkConf
 import com.datastax.spark.connector._
 
-object myObj extends Application{
-
-  val sparkMaster =  "spark://Oladimejis-MacBook-Air.local:7077"
+object myObj extends App {
 
   val pfac = PersonFactory
 

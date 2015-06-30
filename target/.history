@@ -37,3 +37,11 @@ last compile:run
 run 
 sbt 
 run 
+update
+run
+update
+idea
+version
+tasks
+clean
+update
